@@ -1,0 +1,611 @@
+<!DOCTYPE html><!--  This site was created in Webflow. https://www.webflow.com  -->
+<!--  Last Published: Fri Mar 08 2024 03:25:59 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="65e7f9d850b1af5387794005" data-wf-site="65e7f9d850b1af5387793fff">
+<head>
+  <meta charset="utf-8">
+  <title>Kinno</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/kinno.webflow.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Inter:100,200,300,regular,500,600,700,800,900"]  }});</script>
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon.svg" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.svg" rel="apple-touch-icon">
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="global-styles w-embed">
+      <style>
+/* Make text look crisper and more legible in all browsers */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+/* Focus state style for keyboard navigation for the focusable elements */
+*[tabindex]:focus-visible,
+  input[type="file"]:focus-visible {
+   outline: 0.125rem solid #4d65ff;
+   outline-offset: 0.125rem;
+}
+/* Set color style to inherit */
+.inherit-color * {
+    color: inherit;
+}
+/* Get rid of top margin on first element in any rich text element */
+.w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
+  margin-top: 0 !important;
+}
+/* Get rid of bottom margin on last element in any rich text element */
+.w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+	margin-bottom: 0 !important;
+}
+/* Make sure containers never lose their center alignment */
+.container-medium,.container-small, .container-large {
+	margin-right: auto !important;
+  margin-left: auto !important;
+}
+/* 
+Make the following elements inherit typography styles from the parent and not have hardcoded values. 
+Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
+Uncomment this CSS to use it in the project. Leave this message for future hand-off.
+*/
+/*
+a,
+.w-input,
+.w-select,
+.w-tab-link,
+.w-nav-link,
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-dropdown-link {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+}
+*/
+/* Apply "..." after 3 lines of text */
+.text-style-3lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+/* Apply "..." after 2 lines of text */
+.text-style-2lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+/* Adds inline flex display */
+.display-inlineflex {
+  display: inline-flex;
+}
+/* These classes are never overwritten */
+.hide {
+  display: none !important;
+}
+@media screen and (max-width: 991px) {
+    .hide, .hide-tablet {
+        display: none !important;
+    }
+}
+  @media screen and (max-width: 767px) {
+    .hide-mobile-landscape{
+      display: none !important;
+    }
+}
+  @media screen and (max-width: 479px) {
+    .hide-mobile{
+      display: none !important;
+    }
+}
+.margin-0 {
+  margin: 0rem !important;
+}
+.padding-0 {
+  padding: 0rem !important;
+}
+.spacing-clean {
+padding: 0rem !important;
+margin: 0rem !important;
+}
+.margin-top {
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-top {
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+.margin-right {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-right {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+.margin-bottom {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-bottom {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+.margin-left {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+.padding-left {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+.margin-horizontal {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+.padding-horizontal {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+.margin-vertical {
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-vertical {
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+</style>
+    </div>
+    <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar background-color-secondary w-nav">
+      <div class="spacer-xsmall"></div>
+      <div class="padding-global">
+        <div class="container-large space-between">
+          <a href="#hero" class="icon-1x1-large w-nav-brand"><img src="images/kinno-logo.svg" loading="lazy" alt="" class="kinno-logo-brand"></a>
+          <nav role="navigation" class="nav-menu w-nav-menu">
+            <a href="#testimonials" class="navlink w-nav-link">Testimonials</a>
+            <a href="#commercial" class="navlink w-nav-link">Our Services</a>
+            <a href="#contact" class="navlink w-nav-link">FAQs</a>
+          </nav>
+          <a href="#contact" class="button w-button">Contact Us</a>
+          <div class="menu-button w-nav-button">
+            <div class="icon-3 w-icon-nav-menu"></div>
+          </div>
+        </div>
+      </div>
+      <div class="spacer-xsmall"></div>
+    </div>
+    <div class="main-wrapper">
+      <div id="hero" class="section_hero">
+        <div class="padding-global">
+          <div class="padding-section-medium">
+            <div class="container-large background-color-primary">
+              <div class="title-wrapper"><img src="images/kinno-logo-text.svg" loading="lazy" alt="" class="kinno-logo-text padding-section-large"><img src="https://uploads-ssl.webflow.com/65e3e2d9301ad30d2551707e/65e808ad0c8051c8eecff2cc_Vectors-Wrapper.svg" loading="lazy" width="Auto" height="Auto" alt="Kinno logo" class="hero-image z-index-2 logo-screen-size">
+                <h1 class="display-1 z-index-1">Kinno</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section_anchor-cta">
+        <div class="padding-global">
+          <div class="padding-section-small">
+            <div class="container-xsmall">
+              <a href="#commercial" class="anchor-cta-button w-inline-block">
+                <h2 class="text-weight-medium text-size-medium">Innovative Hardware Solutions Tailored for Your Space</h2><img src="https://uploads-ssl.webflow.com/65e3e2d9301ad30d2551707e/65e807e2dc056dbeb20dd30e_Vectors-Wrapper.svg" loading="lazy" width="20" height="20" alt="" class="vectors-wrapper-3">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="testimonials" class="section_testimonials background-color-secondary">
+        <div class="padding-global">
+          <div class="padding-section-large">
+            <div class="container-large is-centered">
+              <h2 class="text-weight-medium text-size-medium is-centered">Over 25 years in hardware installations. From local businesses to industry giants. (Companies will go in this section)</h2>
+              <div class="spacer-medium"></div>
+              <div class="grid_col-6"><img src="images/kinno-logo-text.svg" loading="lazy" alt="" class="testimonial-image"><img src="images/kinno-logo-text.svg" loading="lazy" alt="" class="testimonial-image"><img src="images/kinno-logo-text.svg" loading="lazy" alt="" class="testimonial-image"><img src="images/kinno-logo-text.svg" loading="lazy" alt="" class="testimonial-image"><img src="images/kinno-logo-text.svg" loading="lazy" alt="" class="testimonial-image"><img src="images/kinno-logo-text.svg" loading="lazy" alt="" class="testimonial-image"></div>
+              <div id="w-node-_1bfaf35b-e7ae-d89c-b7ec-09f452d7b58f-87794005" class="spacer-medium"></div>
+              <div class="grid_col-5"><img src="images/kinno-logo-text.svg" loading="lazy" alt="" class="testimonial-image"><img src="images/kinno-logo-text.svg" loading="lazy" alt="" class="testimonial-image"><img src="images/kinno-logo-text.svg" loading="lazy" alt="" class="testimonial-image"><img src="images/kinno-logo-text.svg" loading="lazy" alt="" class="testimonial-image"><img src="images/kinno-logo-text.svg" loading="lazy" alt="" class="testimonial-image"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="commercial" class="section_services">
+        <div class="padding-global">
+          <div class="padding-section-large">
+            <div class="container-large">
+              <div class="section_heading01">
+                <div class="text-color-tertiary text-style-allcaps text-weight-semibold">Commercial</div>
+                <div class="spacer-xsmall"></div>
+                <div class="heading-style-h2">Protect Your Enterprise with Expert Installation</div>
+                <div class="spacer-small"></div>
+                <div class="text-size-medium">Fed up with time-consuming commercial hardware installations? Say goodbye to repetitive projects and rebuilds. Our comprehensive solutions streamline the process, providing everything you need for seamless, modern, and efficient installations.</div>
+                <div class="spacer-large"></div>
+              </div>
+              <div data-current="Data" data-easing="ease" data-duration-in="0" data-duration-out="0" class="tabs w-tabs">
+                <div class="tabs-menu w-tab-menu">
+                  <a data-w-tab="Data" class="kinno_tab-item w-inline-block w-tab-link w--current">
+                    <div>Data</div>
+                  </a>
+                  <a data-w-tab="Security" class="kinno_tab-item w-inline-block w-tab-link">
+                    <div>Security</div>
+                  </a>
+                  <a data-w-tab="Communication" class="kinno_tab-item w-inline-block w-tab-link">
+                    <div>Communication</div>
+                  </a>
+                  <a data-w-tab="Lighting" class="kinno_tab-item w-inline-block w-tab-link">
+                    <div>Lighting</div>
+                  </a>
+                </div>
+                <div class="w-tab-content">
+                  <div data-w-tab="Data" class="kinno_tab-pane w-tab-pane w--tab-active">
+                    <div data-delay="4000" data-animation="slide" class="slider w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+                      <div class="w-slider-mask">
+                        <div class="slide_data-1 w-slide">
+                          <div class="text-content-top-left">
+                            <h3 class="heading-style-h3">Server Room</h3>
+                          </div>
+                        </div>
+                        <div class="slide_data-2 w-slide">
+                          <div class="text-content-top-left">
+                            <h3 class="heading-style-h3">Structured Wiring</h3>
+                          </div>
+                        </div>
+                        <div class="slide_data-3 w-slide">
+                          <div class="text-content-top-left">
+                            <h3 class="heading-style-h3">Indoor Wi-Fi</h3>
+                          </div>
+                        </div>
+                        <div class="slide_data-4 w-slide">
+                          <div class="text-content-top-left">
+                            <h3 class="heading-style-h3">Outdoor Wireless</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="w-slider-arrow-left">
+                        <div class="slider-icon w-icon-slider-left"></div>
+                      </div>
+                      <div class="w-slider-arrow-right">
+                        <div class="slider-icon w-icon-slider-right"></div>
+                      </div>
+                      <div class="w-slider-nav w-round"></div>
+                    </div>
+                  </div>
+                  <div data-w-tab="Security" class="kinno_tab-pane w-tab-pane">
+                    <div data-delay="4000" data-animation="slide" class="slider w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+                      <div class="w-slider-mask">
+                        <div class="slide_security-1 w-slide">
+                          <div class="text-content-top-left">
+                            <h3 class="heading-style-h3">Alarm &amp; CCTV</h3>
+                          </div>
+                        </div>
+                        <div class="slide_security-2 w-slide">
+                          <div class="text-content-top-left">
+                            <h3 class="heading-style-h3">AI Alert 2-Way Audio CCTV</h3>
+                          </div>
+                        </div>
+                        <div class="slide_security-3 w-slide">
+                          <div class="text-content-top-left">
+                            <h3 class="heading-style-h3">Access Control</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="w-slider-arrow-left">
+                        <div class="slider-icon w-icon-slider-left"></div>
+                      </div>
+                      <div class="w-slider-arrow-right">
+                        <div class="slider-icon w-icon-slider-right"></div>
+                      </div>
+                      <div class="w-slider-nav w-round"></div>
+                    </div>
+                  </div>
+                  <div data-w-tab="Communication" class="kinno_tab-pane w-tab-pane">
+                    <div data-delay="4000" data-animation="slide" class="slider w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+                      <div class="w-slider-mask">
+                        <div class="slide_comms-1 w-slide">
+                          <div class="text-content-top-left">
+                            <h3 class="heading-style-h3">Commercial Video</h3>
+                          </div>
+                        </div>
+                        <div class="slide_comms-2 w-slide">
+                          <div class="text-content-top-left">
+                            <h3 class="heading-style-h3">Commercial Audio</h3>
+                          </div>
+                        </div>
+                        <div class="slide_comms-3 w-slide">
+                          <div class="text-content-top-left">
+                            <h3 class="heading-style-h3">IP Phone</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="w-slider-arrow-left">
+                        <div class="slider-icon w-icon-slider-left"></div>
+                      </div>
+                      <div class="w-slider-arrow-right">
+                        <div class="slider-icon w-icon-slider-right"></div>
+                      </div>
+                      <div class="w-slider-nav w-round"></div>
+                    </div>
+                  </div>
+                  <div data-w-tab="Lighting" class="kinno_tab-pane w-tab-pane">
+                    <div class="image-wrapper"><img sizes="(max-width: 479px) 92vw, 95vw" srcset="images/Pexels-Photo-by-Stanislav-Kondratiev-p-500.jpg 500w, images/Pexels-Photo-by-Stanislav-Kondratiev-p-800.jpg 800w, images/Pexels-Photo-by-Stanislav-Kondratiev-p-1080.jpg 1080w, images/Pexels-Photo-by-Stanislav-Kondratiev-p-1600.jpg 1600w, images/Pexels-Photo-by-Stanislav-Kondratiev-p-2000.jpg 2000w, images/Pexels-Photo-by-Stanislav-Kondratiev-p-2600.jpg 2600w, images/Pexels-Photo-by-Stanislav-Kondratiev.jpg 3008w" alt="" src="images/Pexels-Photo-by-Stanislav-Kondratiev.jpg" loading="lazy" class="bg-image">
+                      <div class="text-content-top-left">
+                        <h3 class="heading-style-h3">LED</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section_b2c background-color-secondary">
+        <div class="padding-global">
+          <div class="padding-section-large">
+            <div class="container-large">
+              <div class="section_heading01">
+                <div class="text-color-tertiary text-style-allcaps text-weight-semibold">B2c</div>
+                <div class="spacer-xsmall"></div>
+                <div class="heading-style-h2">Hardware Solutions at Your Doorstep</div>
+                <div class="spacer-small"></div>
+                <div class="text-size-medium text-color-gray">Simplify, Secure, and Transform with our comprehensive hardware installation solutions. From hassle-free home setups to securing your community through neighborhood watch installations, and even enhancing the experience in churches with specialized staging hardware – we redefine the installation process. Say goodbye to tedious projects; our streamlined, modern, and efficient solutions provide everything you need for a seamless transformation of your spaces.</div>
+              </div>
+              <div class="spacer-large"></div>
+              <div class="tablist-wrapper">
+                <div data-current="Church" data-easing="ease" data-duration-in="0" data-duration-out="0" class="tabs-2 w-tabs">
+                  <div class="btc_tab-menu w-tab-menu">
+                    <a data-w-tab="Church" class="b2c_tab w-inline-block w-tab-link w--current">
+                      <div class="text-weight-semibold margin-custom1">01</div>
+                      <div class="tab-container">
+                        <h3 class="heading-style-h4 margin-0">Church</h3>
+                        <div class="spacer-xsmall"></div>
+                        <div class="tab-text">Say farewell to tedious projects – we provide everything you need for seamless, modern, and efficient installations, including specialized staging hardware for churches.</div>
+                      </div>
+                    </a>
+                    <a data-w-tab="Residential" class="b2c_tab w-inline-block w-tab-link">
+                      <div class="text-weight-semibold margin-custom1">02</div>
+                      <div class="tab-container">
+                        <h3 class="heading-style-h4 margin-0">Residential</h3>
+                        <div class="spacer-xsmall"></div>
+                        <div class="tab-text">Simplify Your Space: Hassle-Free Home Hardware Installations. Our all-in-one solutions make it easy, efficient, and modern.</div>
+                      </div>
+                    </a>
+                    <a data-w-tab="Neighborhood Watch" class="b2c_tab w-inline-block w-tab-link">
+                      <div class="text-weight-semibold margin-custom1">03</div>
+                      <div class="tab-container">
+                        <h3 class="heading-style-h4 margin-0">Neighborhood Watch</h3>
+                        <div class="spacer-xsmall"></div>
+                        <div class="tab-text">Wave goodbye to complex projects – we deliver everything you need for seamless, modern, and efficient installations, including specialized solutions for neighborhood watch security.</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="tabs-content w-tab-content">
+                    <div data-w-tab="Church" class="kinno_tab-pane-b2c w-tab-pane w--tab-active"><img width="Auto" height="Auto" alt="" src="images/Tabpanel-2.jpg" loading="lazy" srcset="images/Tabpanel-2-p-500.jpg 500w, images/Tabpanel-2.jpg 770w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 44vw" class="b2c_tab-image">
+                      <div class="linear-overlay"></div>
+                    </div>
+                    <div data-w-tab="Residential" class="kinno_tab-pane-b2c w-tab-pane"><img width="770" height="554" alt="" src="images/Tabpanel.jpg" loading="lazy" srcset="images/Tabpanel-p-500.jpg 500w, images/Tabpanel.jpg 770w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 44vw" class="b2c_tab-image">
+                      <div class="linear-overlay"></div>
+                    </div>
+                    <div data-w-tab="Neighborhood Watch" class="kinno_tab-pane-b2c w-tab-pane"><img width="770" height="554" alt="" src="images/Tabpanel-1.jpg" loading="lazy" srcset="images/Tabpanel-1-p-500.jpg 500w, images/Tabpanel-1.jpg 770w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 44vw" class="b2c_tab-image cover-top">
+                      <div class="linear-overlay"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tablist-wrapper-mobile">
+                <div class="b2c-wrapper"><img width="770" height="554" alt="" src="images/Tabpanel-1.jpg" loading="lazy" srcset="images/Tabpanel-1-p-500.jpg 500w, images/Tabpanel-1.jpg 770w" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, 100vw" class="b2c_tab-image cover-top">
+                  <div class="text-weight-semibold margin-custom1">01</div>
+                  <div class="tab-container">
+                    <h3 class="heading-style-h4 margin-0">Church</h3>
+                    <div class="spacer-xsmall"></div>
+                    <div class="tab-text">Say farewell to tedious projects – we provide everything you need for seamless, modern, and efficient installations, including specialized staging hardware for churches.</div>
+                  </div>
+                  <div class="spacer-huge"></div><img width="770" height="554" alt="" src="images/Tabpanel.jpg" loading="lazy" srcset="images/Tabpanel-p-500.jpg 500w, images/Tabpanel.jpg 770w" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, 100vw" class="b2c_tab-image">
+                  <div class="text-weight-semibold margin-custom1">02</div>
+                  <div class="tab-container">
+                    <h3 class="heading-style-h4 margin-0">Residential</h3>
+                    <div class="spacer-xsmall"></div>
+                    <div class="tab-text">Simplify Your Space: Hassle-Free Home Hardware Installations. Our all-in-one solutions make it easy, efficient, and modern.</div>
+                  </div>
+                  <div class="spacer-huge"></div><img width="Auto" height="Auto" alt="" src="images/Tabpanel-2.jpg" loading="lazy" srcset="images/Tabpanel-2-p-500.jpg 500w, images/Tabpanel-2.jpg 770w" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, 100vw" class="b2c_tab-image">
+                  <div class="text-weight-semibold margin-custom1">03</div>
+                  <div class="tab-container">
+                    <h3 class="heading-style-h4 margin-0">Neighborhood Watch</h3>
+                    <div class="spacer-xsmall"></div>
+                    <div class="tab-text">Wave goodbye to complex projects – we deliver everything you need for seamless, modern, and efficient installations, including specialized solutions for neighborhood watch security.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="contact" class="section_faq-contact">
+        <div class="padding-global">
+          <div class="padding-section-large">
+            <div class="container-large">
+              <div class="grid_col-2">
+                <div class="frame-28">
+                  <div class="faq_heading">
+                    <h2 class="heading-style-h3 margin-0">Frequently Asked Questions</h2>
+                    <div class="spacer-small"></div>
+                    <div class="text-size-medium text-color-gray">Need help with something? Here are our most frequently asked questions.</div>
+                  </div>
+                  <div class="spacer-large"></div>
+                  <div class="faq1_component">
+                    <div class="faq1_accordion">
+                      <div data-w-id="c35275a3-078b-fb83-330e-d742a7f91f07" class="faq1_question">
+                        <div class="text-size-medium text-weight-bold">Who is Kinno?</div>
+                        <div class="icon-1x1-small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 20 21" fill="none">
+                            <g clip-path="url(#clip0_190_67)">
+                              <path d="M10 3.3999V17.3999M10 17.3999L17 10.3999M10 17.3999L3 10.3999" stroke="#98A2B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                            <defs>
+                              <clippath id="clip0_190_67">
+                                <rect width="20" height="20" fill="white" transform="translate(0 0.399902)"></rect>
+                              </clippath>
+                            </defs>
+                          </svg></div>
+                      </div>
+                      <div style="width:100%;height:0px" class="faq1_answer">
+                        <div class="margin-bottom margin-medium">
+                          <p class="text-color-gray">Kinno is a seasoned professional with extensive experience in hardware installation. With over 25 of expertise, Kinno specializes in installing network, lighting, and security system hardware for both commercial and residential properties. His technical proficiency and attention to detail ensure efficient and effective hardware installations tailored to your specific needs.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="faq1_accordion">
+                      <div data-w-id="c35275a3-078b-fb83-330e-d742a7f91f11" class="faq1_question">
+                        <div class="text-size-medium text-weight-bold">What types of hardware installations do you specialize in?</div>
+                        <div class="icon-1x1-small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 20 21" fill="none">
+                            <g clip-path="url(#clip0_190_67)">
+                              <path d="M10 3.3999V17.3999M10 17.3999L17 10.3999M10 17.3999L3 10.3999" stroke="#98A2B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                            <defs>
+                              <clippath id="clip0_190_67">
+                                <rect width="20" height="20" fill="white" transform="translate(0 0.399902)"></rect>
+                              </clippath>
+                            </defs>
+                          </svg></div>
+                      </div>
+                      <div style="width:100%;height:0px" class="faq1_answer">
+                        <div class="margin-bottom margin-medium">
+                          <p class="text-color-gray">Kinno specializes in a diverse range of hardware installations, including network infrastructure essentials such as routers, switches, and servers. Additionally, Kinno excels in installing lighting systems and security hardware for both commercial and residential properties. Kinno&#x27;s expertise covers configuring and maintaining various hardware components to meet specific requirements effectively.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="faq1_accordion">
+                      <div data-w-id="c35275a3-078b-fb83-330e-d742a7f91f1b" class="faq1_question">
+                        <div class="text-size-medium text-weight-bold">What is the timeframe for completing a hardware installation?</div>
+                        <div class="icon-1x1-small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 20 21" fill="none">
+                            <g clip-path="url(#clip0_190_67)">
+                              <path d="M10 3.3999V17.3999M10 17.3999L17 10.3999M10 17.3999L3 10.3999" stroke="#98A2B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                            <defs>
+                              <clippath id="clip0_190_67">
+                                <rect width="20" height="20" fill="white" transform="translate(0 0.399902)"></rect>
+                              </clippath>
+                            </defs>
+                          </svg></div>
+                      </div>
+                      <div style="width:100%;height:0px" class="faq1_answer">
+                        <div class="margin-bottom margin-medium">
+                          <p class="text-color-gray">The timeframe for completing a hardware installation can vary depending on factors such as the complexity of the project, the size of the installation, and any unforeseen challenges encountered. Typically, smaller-scale installations may take a few hours to a couple of days, while larger and more complex projects could require several days or weeks to complete. It&#x27;s essential to conduct thorough planning and assessment beforehand to provide a more accurate estimate of the installation timeline.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="faq1_accordion">
+                      <div data-w-id="c35275a3-078b-fb83-330e-d742a7f91f25" class="faq1_question">
+                        <div class="text-size-medium text-weight-bold">Do you work with both new constructions and existing spaces?</div>
+                        <div class="icon-1x1-small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 20 21" fill="none">
+                            <g clip-path="url(#clip0_190_67)">
+                              <path d="M10 3.3999V17.3999M10 17.3999L17 10.3999M10 17.3999L3 10.3999" stroke="#98A2B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                            <defs>
+                              <clippath id="clip0_190_67">
+                                <rect width="20" height="20" fill="white" transform="translate(0 0.399902)"></rect>
+                              </clippath>
+                            </defs>
+                          </svg></div>
+                      </div>
+                      <div style="width:100%;height:0px" class="faq1_answer">
+                        <div class="margin-bottom margin-medium">
+                          <p class="text-color-gray">Kinno has experience working with both new constructions and existing spaces. Whether it&#x27;s collaborating with architects and contractors on new construction projects or assessing and upgrading existing infrastructure, Kinno&#x27;s expertise extends to various environments. From designing and implementing hardware installations in new constructions to retrofitting and optimizing systems in existing spaces, Kinno is equipped to handle a wide range of projects.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="faq1_accordion">
+                      <div data-w-id="c35275a3-078b-fb83-330e-d742a7f91f2f" class="faq1_question">
+                        <div class="text-size-medium text-weight-bold">How can your hardware solutions enhance our commercial security?</div>
+                        <div class="icon-1x1-small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 20 21" fill="none">
+                            <g clip-path="url(#clip0_190_67)">
+                              <path d="M10 3.3999V17.3999M10 17.3999L17 10.3999M10 17.3999L3 10.3999" stroke="#98A2B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                            <defs>
+                              <clippath id="clip0_190_67">
+                                <rect width="20" height="20" fill="white" transform="translate(0 0.399902)"></rect>
+                              </clippath>
+                            </defs>
+                          </svg></div>
+                      </div>
+                      <div style="width:100%;height:0px" class="faq1_answer">
+                        <div class="margin-bottom margin-medium">
+                          <p class="text-color-gray">Kinno&#x27;s hardware solutions can significantly enhance commercial security in several ways. By implementing state-of-the-art surveillance systems, access control solutions, and intrusion detection systems, Kinno ensures comprehensive coverage and real-time monitoring of your premises. With integrated technology and remote management capabilities, Kinno&#x27;s solutions provide peace of mind and protection for your assets, employees, and customers.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact-wrapper">
+                  <div class="contact-form">
+                    <div class="faq_heading">
+                      <h2 class="heading-style-h3 margin-0">Contact</h2>
+                      <div class="spacer-small"></div>
+                      <div class="text-size-medium text-color-gray">If you have any further questions, you can reach us at <a href="#" class="contact-link">(626)475-3258</a> or through our email <a href="mailto:kinno@kinno.com" class="contact-link">kinno@kinno.com</a>; you may also use this form to communicate with us.</div>
+                    </div>
+                    <div class="spacer-large"></div>
+                    <div class="form-block w-form">
+                      <form id="email-form" name="email-form" data-name="Email Form" method="get" class="form" data-wf-page-id="65e7f9d850b1af5387794005" data-wf-element-id="2260bb84-f4dc-a77a-515f-9e16a1ef8d0f">
+                        <div class="input-group"><input class="kinno_input-field w-input" maxlength="256" name="name" data-name="Name" placeholder="Full Name*" type="text" id="name" required=""><input class="kinno_input-field w-input" maxlength="256" name="Phone-Number" data-name="Phone Number" placeholder="Phone" type="tel" id="Phone-Number"></div>
+                        <div class="spacer-custom1"></div><input class="kinno_input-field w-input" maxlength="256" name="email" data-name="Email" placeholder="Email Address*" type="email" id="email" required="">
+                        <div class="spacer-custom1"></div><input class="kinno_input-field w-input" maxlength="256" name="Subject" data-name="Subject" placeholder="Subject*" type="text" id="Subject" required="">
+                        <div class="spacer-custom1"></div><textarea required="" placeholder="Enter your message*" maxlength="5000" id="Message" name="Message" data-name="Message" class="kinno_text-area w-input"></textarea>
+                        <div class="spacer-xlarge"></div><input type="submit" data-wait="Please wait..." class="button is-secondary w-button" value="Submit">
+                      </form>
+                      <div class="success-message w-form-done">
+                        <div>Thank you! Your submission has been received!</div>
+                      </div>
+                      <div class="error-message w-form-fail">
+                        <div>Oops! Something went wrong while submitting the form.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section_footer">
+        <div class="padding-global">
+          <div class="container-large space-between">
+            <div class="div-block-3"><img src="images/kinno-logo-text.svg" loading="lazy" alt="" class="kinno-logo-text footer">
+              <div class="text-size-small text-color-tertiary">© 2024 Kinno. All rights reserved.</div>
+              <div class="div-footer_social-icons">
+                <div class="link---twitter-profile">
+                  <div class="svg"><img src="https://uploads-ssl.webflow.com/65e3e2d9301ad30d2551707e/65e97bbc399dd32987815a27_Vectors-Wrapper.svg" loading="lazy" width="22.98163414001465" height="22" alt="" class="vectors-wrapper-25"></div>
+                </div>
+                <div class="link---twitter-profile">
+                  <div class="svg-2"><img src="https://uploads-ssl.webflow.com/65e3e2d9301ad30d2551707e/65e97bbdfc4b611ed988fe18_Vectors-Wrapper.svg" loading="lazy" width="23.98590087890625" height="23.99530029296875" alt="" class="vectors-wrapper-26"><img src="https://uploads-ssl.webflow.com/65e3e2d9301ad30d2551707e/65e97bbdd0e4baac84b2b90d_Vectors-Wrapper.svg" loading="lazy" width="12.320918083190918" height="12.3257474899292" alt="" class="vectors-wrapper-27"><img src="https://uploads-ssl.webflow.com/65e3e2d9301ad30d2551707e/65e97bbe6d0679aa0b15af72_Vectors-Wrapper.svg" loading="lazy" width="2.8764102458953857" height="2.877556324005127" alt="" class="vectors-wrapper-28"></div>
+                </div>
+                <div class="link---twitter-profile"><img src="https://uploads-ssl.webflow.com/65e3e2d9301ad30d2551707e/65e97bbf22b79fd34d67ba0b_Vectors-Wrapper.svg" loading="lazy" width="24" height="24" alt="" class="vectors-wrapper-29"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=65e7f9d850b1af5387793fff" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+</body>
+</html>
